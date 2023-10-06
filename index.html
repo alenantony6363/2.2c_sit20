@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>User Registration</h1>
+            <nav>
+                <router-link to="/step1">Step 1</router-link>
+                <router-link to="/step2">Step 2</router-link>
+                <router-link to="/step3">Step 3</router-link>
+                <router-link to="/confirmation">Confirmation</router-link>
+            </nav>
+        </header>
+
+        <router-view></router-view>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@3.5.2/dist/vue-router.js"></script>
+    <script>
+        // Component for Step 1 - Personal Information
+        const Step1 = {
+            template: `
+                <div class="content">
+                    <h1>Step 1 - Personal Information</h1>
+                    <form>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" placeholder="Enter your first name" required>
+
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" placeholder="Enter your last name" required>
+
+                        <router-link to="/step2"><button type="button">Next</button></router-link>
+                    </form>
+                </div>
+            `,
+        };
+
+        // Component for Step 2 - Contact Information
+        const Step2 = {
+            template: `
+                <div class="content">
+                    <h1>Step 2 - Contact Information</h1>
+                    <form>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="tel" id="phoneNumber" placeholder="Enter your phone number" required>
+
+                        <router-link to="/step3"><button type="button">Next</button></router-link>
+                    </form>
+                </div>
+            `,
+        };
+
+        // Component for Step 3 - Account Setup
+        const Step3 = {
+            template: `
+                <div class="content">
+                    <h1>Step 3 - Account Setup</h1>
+                    <form>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" placeholder="Choose a username" required>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Enter a password" required>
+
+                        <router-link to="/confirmation"><button type="button">Complete Registration</button></router-link>
+                    </form>
+                </div>
+            `,
+        };
+
+        // Component for Confirmation
+        const Confirmation = {
+            template: `
+                <div class="content">
+                    <h1>Confirmation</h1>
+                    <p>Your registration is complete. Thank you for signing up!</p>
+                </div>
+            `,
+        };
+
+        const router = new VueRouter({
+            routes: [
+                { path: '/step1', component: Step1 },
+                { path: '/step2', component: Step2 },
+                { path: '/step3', component: Step3 },
+                { path: '/confirmation', component: Confirmation },
+                { path: '/', redirect: '/step1' },
+            ],
+        });
+
+        const app = new Vue({
+            router,
+        }).$mount('#app');
+    </script>
+
+   
+    <footer>
+        <p>&copy; 2023 User Registration, Alen Antony</p>
+    </footer>
+</body>
+</html>

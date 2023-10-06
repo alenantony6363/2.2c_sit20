@@ -1,0 +1,116 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and set a default font for the entire page */
+body {
+    background-color: #f0f0f0; 
+    font-family: 'Helvetica', sans-serif; 
+    color: #555; 
+}
+
+/* Style the header with a background color, padding, and center text */
+header {
+    background-color: #8909d3; 
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Style the header's h1 element */
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+}
+
+/* Style the navigation links */
+nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #3498db; 
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Style the content container with a max width, background color, padding, border-radius, and box shadow */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Style form labels with a display block, margin, and font size */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Style input fields with a width, padding, margin, border, border-radius, and font size */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Style buttons with a background color, text color, border, padding, border-radius, cursor, and font size */
+button[type="button"] {
+    background-color: #c76a12; 
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+/* Style button hover state with a different background color */
+button[type="button"]:hover {
+    background-color: #28a01d; 
+}
+
+/* Style the unordered list with no list style and padding */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Style list items with margin and font size */
+ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Style the footer with a background color, text alignment, padding, position, width, and text color */
+footer {
+    background-color: #b2b419; 
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+}
